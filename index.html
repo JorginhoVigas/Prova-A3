@@ -1,147 +1,209 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prova A3 HTML e CSS</title>
+
     <style>
         /* Estilização Global */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    color: #444;
-    background-color: #f4f4f4;
-}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #444;
+            background-color: #f4f4f4;
+        }
 
-/* Cabeçalho */
-header {
-    background: #333;
-    color: #fff;
-    padding: 10px 20px;
-    text-align: center;
-}
+        /* Cabeçalho */
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
 
-/* Seção da Equipe */
-.equipe {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 20px;
-    gap: 20px;
-}
-.membro {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    text-align: center;
-    padding: 20px;
-    width: 300px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.membro img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-.membro h2 {
-    font-size: 1.5em;
-    margin: 10px 0;
-    color: #333;
-}
-.membro p {
-    font-size: 1em;
-    color: #666;
-}
+        /* Seção da Equipe */
+        .equipe {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px;
+            gap: 20px;
+        }
 
-/* Estilos para cores de texto e fundo */
-.red-text {
-    color: red;
-}
-.green-text {
-    color: #00ff00;
-}
-.yellow-bg {
-    background-color: yellow;
-    color: black;
-}
+        .membro {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-/* Seções */
-section {
-    margin: 20px;
-    padding: 20px;
-    background: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+        .membro img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
 
-/* Tabela */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-}
+        .membro h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+            color: #333;
+        }
 
-table th, table td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: left;
-}
+        .membro p {
+            font-size: 1em;
+            color: #666;
+        }
 
-table th {
-    background: #333;
-    color: #fff;
-}
+        /* Estilos para cores de texto e fundo */
+        .highlight {
+            color: red;
+        
+        }
 
-/* Formulário */
-form {
-    margin-top: 10px;
-}
+        /* Seções */
+        section {
+            margin: 20px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-input, textarea, button {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
+        /* Tabela */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
 
-button {
-    background: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
+        table th,
+        table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
 
-button:hover {
-    background: #555;
-}
+        table th {
+            background: #333;
+            color: #fff;
+        }
 
-/* Lista */
-ul {
-    list-style: square inside;
-}
+        /* Formulário */
+        form {
+            margin-top: 10px;
+        }
 
-/* Imagem com borda */
-.img-borda {
-    width: 100%;
-    max-width: 300px;
-    border: 5px solid #333;
-    border-radius: 10px;
-}
+        input,
+        textarea,
+        button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
 
-/* Rodapé */
-footer {
-    text-align: center;
-    padding: 10px;
-    background: #333;
-    color: #fff;
-}
+        button {
+            background: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
 
+        button:hover {
+            background: #555;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .equipe {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .red-text {
+            color: red;
+        }
+
+        .green-text {
+            color: #00ff00;
+        }
+
+        .yellow-bg {
+            background-color: yellow;
+            padding: 5px;
+        }
+
+        .java-text {
+            color: #f89800;
+            /* cor laranja */
+        }
+
+        .python-text {
+            color: #306998;
+            /* cor do Python */
+        }
+
+        .mysql-text {
+            color: #00758f;
+            /* cor do MySQL */
+        }
+
+        .javascript-text {
+            color: #f7df1e;
+            /* cor do JavaScript */
+        }
+
+        .portugol-text {
+            color: #3399ff;
+            /* cor do Portugol */
+        }
+
+        .html-text {
+            color: #ff6347;
+            /* cor tomate */
+        }
+
+        .postgresql-text {
+            color: #8a2be2;
+            /* cor azul-violeta */
+        }
+
+        .excel-text {
+            color: #32cd32;
+            /* cor verde limão */
+        }
+
+        .word-text {
+            color: #ff4500;
+            /* cor laranja-avermelhada */
+        }
+
+        .sqlserver-text {
+            color: #20b2aa;
+            /* cor verde-azulada */
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
     </style>
 </head>
+
 <body>
     <!-- Cabeçalho da Página -->
     <header>
@@ -149,77 +211,416 @@ footer {
         <p>Aqui nesta página você encontra o uso de diversos elementos HTML e CSS.</p>
     </header>
 
-    <!-- Conteúdo principal -->
     <section>
-        <h2>Parágrafo e Fontes</h2>
+        <img src="https://pbs.twimg.com/profile_images/1427421297642987520/SNfxI6Qx_400x400.jpg" alt="Logo da ETB">
+    </section>
+
+    <section>
+        <h2>Um pouco sobre o nosso curso</h2>
         <p style="font-size: 1.2em; color: #333;">
-            Este é um exemplo de parágrafo com <strong>texto em negrito</strong>, 
-            <em>texto em itálico</em>, e <u>texto sublinhado</u>. O texto pode ser estilizado com CSS para alterar 
-            cores, fontes, tamanhos e muito mais.
+            O <strong>Técnico em Informática</strong> é um profissional de nível técnico qualificado para desempenhar
+            funções e atividades da área de <em>suporte</em> bem como <strong>desenvolvimento de programas de
+                computador</strong> auxiliando o profissional de nível superior no campo de informática em todas as
+            etapas do trabalho de <u>instalação elétrica</u>, computadores, <u>redes de computadores</u>,
+            <strong>desenvolvimento/manutenção de programas computacionais</strong>, instalação de software, manutenção
+            de microcomputadores e periféricos bem como utilizar gerenciadores de banco de dados e editores de texto e
+            planilhas eletrônicas.
+        </p>
+        <h3>HABILITAÇÕES</h3>
+        <ul>
+            <li><strong>Auxiliar técnico em Informática</strong> (1 semestre);</li>
+            <li><strong>Assistente Técnico I em Informática</strong> (2 semestres);</li>
+            <li><strong>Assistente Técnico II em Informática</strong> (3 semestres);</li>
+            <li><strong>TÉCNICO EM INFORMÁTICA</strong> (4 semestres + estágio).</li>
+        </ul>
+        <h3>ÁREA DE ATUAÇÃO</h3>
+        <p>
+            O mercado de trabalho é bastante amplo, seja no <strong>Comércio</strong>, <strong>Indústria</strong>,
+            <strong>Empresas Públicas e Privadas</strong>, Escritórios particulares (<em>Contabilidade</em>,
+            <em>Advocacia</em>); etc. Permite atuar como <u>autônomo</u> e empreendedor.
+        </p>
+        <h3>PRINCIPAIS ATIVIDADES</h3>
+        <ul>
+            <li><strong>Desenvolvimento e manutenção de programas</strong>;</li>
+            <li><strong>Manutenção de equipamentos de informática</strong>;</li>
+            <li><strong>Operação de microcomputador</strong>.</li>
+        </ul>
+        <h3>REQUISITOS PESSOAIS NECESSÁRIOS</h3>
+        <p>
+            <u>Raciocínio Lógico</u>, capacidade de abstração, criatividade, espontaneidade, organização, capacidade de
+            observação, <strong>raciocínio espacial</strong>, ética profissional.
+        </p>
+        <h3>LOCAIS DE TRABALHO</h3>
+        <p>
+            <strong>Comércio em Geral</strong> – <strong>Empresa Públicas e Privadas</strong> – Escritórios
+            particulares.
         </p>
     </section>
+
     <section>
-        <h2>Cores</h2>
-        <p class="red-text">Este texto é vermelho.</p>
-        <p class="green-text">Este texto é verde (usando código hexadecimal).</p>
-        <p class="yellow-bg">Este tem fundo amarelo.</p>
+        <h1>Centro de Educação Profissional Escola Técnica de Brasília</h1>
+        <h2>Curso: Técnico de Nível Médio de Técnico em Informática</h2>
+        <p><strong>Eixo Tecnológico:</strong> Informação e Comunicação</p>
+        <p><strong>Modalidade:</strong> Presencial</p>
+
+        <div class="module">
+            <h3>MÓDULO I</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nº.</th>
+                        <th>COMPONENTES CURRICULARES</th>
+                        <th>AULAS SEMANAIS</th>
+                        <th>CARGA HORÁRIA Presencial</th>
+                        <th>CARGA HORÁRIA Não Presencial</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01</td>
+                        <td>Desenho Técnico</td>
+                        <td>4</td>
+                        <td>76</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <td>02</td>
+                        <td>Arquitetura Computadores I</td>
+                        <td>4</td>
+                        <td>76</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <td>03</td>
+                        <td>Estrutura de Dados e Lógica de Programação</td>
+                        <td>6</td>
+                        <td>114</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <td>04</td>
+                        <td>Informática Aplicada</td>
+                        <td>4</td>
+                        <td>76</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <td>05</td>
+                        <td>Inglês Instrumental I</td>
+                        <td>2</td>
+                        <td>38</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <td>06</td>
+                        <td>Matemática Aplicada a Informática</td>
+                        <td>2</td>
+                        <td>--</td>
+                        <td>38</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2"><strong>TOTAL DO MÓDULO</strong></td>
+                        <td><strong>22</strong></td>
+                        <td><strong>380</strong></td>
+                        <td><strong>38</strong></td>
+                    </tr>
+                </tfoot>
+            </table>
+            <p>Certificação de qualificação profissional de Operador de Computador no total de 418 horas</p>
+        </div>
+
+        <div class="module">
+            <h3>MÓDULO II</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nº.</th>
+                        <th>COMPONENTES CURRICULARES</th>
+                        <th>AULAS SEMANAIS</th>
+                        <th>CARGA HORÁRIA Presencial</th>
+                        <th>CARGA HORÁRIA Não Presencial</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>07</td>
+                        <td>Banco de Dados</td>
+                        <td>4</td>
+                        <td>76</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <td>08</td>
+                        <td>Desenvolvimento para WEB I</td>
+                        <td>2</td>
+                        <td>38</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <td>09</td>
+                        <td>Linguagem e Técnicas de Programação I</td>
+                        <td>6</td>
+                        <td>114</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Arquitetura de Computadores II</td>
+                        <td>4</td>
+                        <td>76</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Redes I</td>
+                        <td>4</td>
+                        <td>76</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Inglês Instrumental II</td>
+                        <td>2</td>
+                        <td>--</td>
+                        <td>38</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2"><strong>TOTAL DO MÓDULO</strong></td>
+                        <td><strong>22</strong></td>
+                        <td><strong>380</strong></td>
+                        <td><strong>38</strong></td>
+                    </tr>
+                </tfoot>
+            </table>
+            <p>Certificado de qualificação profissional de Montador e Reparador de Computadores no total de 418 horas
+            </p>
+        </div>
+
+        <div class="module">
+            <h3>MÓDULO III</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nº.</th>
+                        <th>COMPONENTES CURRICULARES</th>
+                        <th>AULAS SEMANAIS</th>
+                        <th>CARGA HORÁRIA Presencial</th>
+                        <th>CARGA HORÁRIA Não Presencial</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>13</td>
+                        <td>Desenvolvimento para WEB II</td>
+                        <td>6</td>
+                        <td>114</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>Gestão Empresarial I</td>
+                        <td>2</td>
+                        <td>38</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>Linguagem e Técnicas de Programação II</td>
+                        <td>6</td>
+                        <td>114</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>Redes II</td>
+                        <td>4</td>
+                        <td>76</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>Português Instrumental</td>
+                        <td>2</td>
+                        <td>--</td>
+                        <td>38</td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td>Modelagem de Sistemas</td>
+                        <td>2</td>
+                        <td>38</td>
+                        <td>--</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2"><strong>TOTAL DO MÓDULO</strong></td>
+                        <td><strong>22</strong></td>
+                        <td><strong>380</strong></td>
+                        <td><strong>38</strong></td>
+                    </tr>
+                </tfoot>
+            </table>
+            <p>Certificado de qualificação profissional de Programador de Sistemas no total de 418 horas</p>
+        </div>
+
+        <div class="module">
+            <h3>MÓDULO IV</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nº.</th>
+                        <th>COMPONENTES CURRICULARES</th>
+                        <th>AULAS SEMANAIS</th>
+                        <th>CARGA HORÁRIA Presencial</th>
+                        <th>CARGA HORÁRIA Não Presencial</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>19</td>
+                        <td>Desenvolvimento de Projeto</td>
+                        <td>4</td>
+                        <td>76</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td>Linguagem e Técnicas de Programação III</td>
+                        <td>4</td>
+                        <td>76</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <td>21</td>
+                        <td>Segurança da Informação</td>
+                        <td>4</td>
+                        <td>76</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                        <td>Sistemas Operacionais</td>
+                        <td>4</td>
+                        <td>76</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <td>23</td>
+                        <td>Gestão de Tecnologia da Informação</td>
+                        <td>2</td>
+                        <td>38</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <td>24</td>
+                        <td>Segurança do Trabalho</td>
+                        <td>2</td>
+                        <td>38</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <td>25</td>
+                        <td>Gestão Empresarial II</td>
+                        <td>2</td>
+                        <td>--</td>
+                        <td>38</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2"><strong>TOTAL DO MÓDULO</strong></td>
+                        <td><strong>22</strong></td>
+                        <td><strong>380</strong></td>
+                        <td><strong>38</strong></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <h3>Carga Horária Total</h3>
+        <table>
+            <tr>
+                <td>Carga horária presencial</td>
+                <td>1.520</td>
+            </tr>
+            <tr>
+                <td>Carga horária não presencial</td>
+                <td>152</td>
+            </tr>
+            <tr>
+                <td>Carga horária Estágio Profissional Supervisionado</td>
+                <td>120</td>
+            </tr>
+            <tr>
+                <td><strong>Carga horária total do curso</strong></td>
+                <td><strong>1.792</strong></td>
+            </tr>
+        </table>
+
+        <div class="observations">
+            <h3>Observações:</h3>
+            <ol>
+                <li>A hora-aula tem duração de 57 minutos</li>
+                <li>A carga horária presencial será de 1520h (um mil, quinhentos e vinte), sendo 20 (vinte) aulas
+                    semanais presenciais, 4 (quatro) aulas por dia presenciais.</li>
+                <li>A carga horária não presencial será de 152h (cento e cinquenta e duas), sendo 2 (duas) aulas
+                    semanais não presenciais.</li>
+                <li>O Estágio Profissional Supervisionado Obrigatório pode ser iniciado após a conclusão do Módulo I.
+                </li>
+                <li>Horário das aulas:
+                    <ul>
+                        <li>Matutino: 8h às 12h, com intervalo de 12 minutos</li>
+                        <li>Vespertino: 14h às 18h, com intervalo de 12 minutos</li>
+                        <li>Noturno: 19h às 23h, com intervalo de 12 minutos</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
     </section>
+
     <section>
-        <h2>Imagem com Bordas</h2>
-        <img src="https://pbs.twimg.com/profile_images/1427421297642987520/SNfxI6Qx_400x400.jpg" alt="Logo da ETB" class="img-borda">
-    </section>
-    <section>
-        <h2>Lista</h2>
+        <h2>Principais Tecnologias</h2>
         <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
+            <li class="java-text">Java</li>
+            <li class="python-text">Python</li>
+            <li class="mysql-text">MySQL</li>
+            <li class="javascript-text">JavaScript</li>
+            <li class="portugol-text">Portugol</li>
+            <li class="html-text">Html</li>
+            <li class="postgresql-text">Postgresql</li>
+            <li class="excel-text">Microsoft Excel</li>
+            <li class="word-text">Microsoft Word</li>
+            <li class="sqlserver-text">Microsoft Sql Server</li>
         </ul>
     </section>
-    <section>
-        <h2>Tabela</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>Idade</th>
-                    <th>Cidade</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Yuri</td>
-                    <td>20</td>
-                    <td>Brasília</td>
-                </tr>
-                <tr>
-                    <td>Ana Carla</td>
-                    <td>29</td>
-                    <td>Brasília</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
+
     <section>
         <h2>Formulário</h2>
         <form action="#" method="post">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required>
-            <br>
-            <label for="email">E-mail:</label>
+            
+            <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
-            <br>
+            
             <label for="mensagem">Mensagem:</label>
             <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-            <br>
+            
             <button type="submit">Enviar</button>
         </form>
     </section>
+
     <section>
         <h2>Links</h2>
-        <p>Visite o <a href="https://www.google.com" target="_blank">Google</a> para pesquisar na web.</p>
         <p>Visite o site da instituição <a href="https://etb.com.br" target="_blank">ETB</a>.</p>
+        <p>Visite o <a href="https://www.google.com" target="_blank">Google</a> para pesquisar na web.</p>
     </section>
+
     <main>
         <section class="equipe">
             <div class="membro">
@@ -240,7 +641,8 @@ footer {
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Prova A3. Todos os direitos reservados.</p>
+        <p>&copy; 2024 Escola Técnica de Brasília. Todos os direitos reservados.</p>
     </footer>
 </body>
+
 </html>
