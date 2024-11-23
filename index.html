@@ -7,25 +7,59 @@
     <title>Prova A3 HTML e CSS</title>
 
     <style>
-        /* Estilização Global */
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-bg: #333;
+            --secondary-bg: #f4f4f4;
+            --primary-color: #fff;
+            --secondary-color: #666;
+            --highlight-color: #00ff00;
+            --error-color: red;
+            --shadow: rgba(0, 0, 0, 0.1);
+            --font-primary: Arial, sans-serif;
+        }
+
+        body {
+            font-family: var(--font-primary);
             line-height: 1.6;
-            color: #444;
-            background-color: #f4f4f4;
+            background-color: var(--secondary-bg);
+            color: #333;
         }
 
-        /* Cabeçalho */
         header {
-            background: #333;
-            color: #fff;
-            padding: 10px 20px;
+            background: var(--primary-bg);
+            color: var(--primary-color);
             text-align: center;
+            padding: 15px;
         }
 
-        /* Seção da Equipe */
+        header h1 {
+            font-size: 2em;
+        }
+
+        h3 {
+            margin: 0;
+            padding: 0;
+            font-size: 1.5em;
+        }
+
+        ol {
+            padding-left: 20px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
         .equipe {
             display: flex;
             justify-content: center;
@@ -35,13 +69,14 @@
         }
 
         .membro {
-            background: #fff;
+            background: var(--primary-color);
             border: 1px solid #ddd;
             border-radius: 5px;
             text-align: center;
             padding: 20px;
             width: 300px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px var(--shadow);
+            margin: 10px;
         }
 
         .membro img {
@@ -53,35 +88,25 @@
 
         .membro h2 {
             font-size: 1.5em;
-            margin: 10px 0;
             color: #333;
         }
 
         .membro p {
             font-size: 1em;
-            color: #666;
+            color: var(--secondary-color);
         }
 
-        /* Estilos para cores de texto e fundo */
-        .highlight {
-            color: red;
-
-        }
-
-        /* Seções */
         section {
             margin: 20px;
             padding: 20px;
-            background: #fff;
+            background: var(--primary-color);
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px var(--shadow);
         }
 
-        /* Tabela */
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 10px;
         }
 
         table th,
@@ -92,176 +117,201 @@
         }
 
         table th {
-            background: #333;
-            color: #fff;
+            background-color: var(--primary-bg);
+            color: var(--primary-color);
         }
 
-        /* Formulário */
-        form {
-            margin-top: 10px;
-        }
-
-        input,
-        textarea,
-        button {
+        form input,
+        form textarea,
+        form button {
             width: 100%;
             padding: 10px;
             margin: 5px 0;
-            border: 1px solid #ddd;
             border-radius: 5px;
+            border: 1px solid #ddd;
         }
 
         button {
-            background: #333;
-            color: #fff;
+            background-color: var(--primary-bg);
+            color: var(--primary-color);
             border: none;
             cursor: pointer;
         }
 
         button:hover {
-            background: #555;
-        }
-
-        .red-text {
-            color: red;
-        }
-
-        .green-text {
-            color: #00ff00;
-        }
-
-        .yellow-bg {
-            background-color: yellow;
-            padding: 5px;
-        }
-
-        .java-text {
-            color: #f89800;
-            /* cor laranja */
-        }
-
-        .python-text {
-            color: #306998;
-            /* cor do Python */
-        }
-
-        .mysql-text {
-            color: #00758f;
-            /* cor do MySQL */
-        }
-
-        .javascript-text {
-            color: #f7df1e;
-            /* cor do JavaScript */
-        }
-
-        .portugol-text {
-            color: #3399ff;
-            /* cor do Portugol */
-        }
-
-        .html-text {
-            color: #ff6347;
-            /* cor tomate */
-        }
-
-        .postgresql-text {
-            color: #8a2be2;
-            /* cor azul-violeta */
-        }
-
-        .excel-text {
-            color: #32cd32;
-            /* cor verde limão */
-        }
-
-        .word-text {
-            color: #ff4500;
-            /* cor laranja-avermelhada */
-        }
-
-        .sqlserver-text {
-            color: #20b2aa;
-            /* cor verde-azulada */
+            background-color: #555;
         }
 
         footer {
-            background-color: #333;
-            color: white;
+            background-color: var(--primary-bg);
+            color: var(--primary-color);
             text-align: center;
-            padding: 20px 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+            padding: 10px;
         }
 
-        /* Responsividade para dispositivos com largura até 768px */
+        @media (max-width: 1024px) {
+            .equipe {
+                justify-content: center;
+            }
+
+            .membro {
+                width: 250px;
+            }
+
+            header h1 {
+                font-size: 1.5em;
+            }
+        }
+
         @media (max-width: 768px) {
+            .equipe {
+                justify-content: space-evenly;
+            }
+
+            .membro {
+                width: 45%;
+                margin-bottom: 15px;
+            }
+
+            header h1 {
+                font-size: 1.3em;
+            }
+
+            table th,
+            table td {
+                font-size: 0.9em;
+                padding: 8px;
+            }
+
+            footer {
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 576px) {
             .equipe {
                 flex-direction: column;
                 align-items: center;
             }
 
             .membro {
-                width: 100%;
-                /* Alinha os itens da equipe para ocupar 100% da largura da tela */
-                margin: 10px 0;
+                width: 90%;
             }
 
-            /* Ajuste de tabela */
-            table {
-                font-size: 0.9em;
-                /* Diminuir o tamanho da fonte para telas pequenas */
+            header h1 {
+                font-size: 1.2em;
             }
 
-            /* Ajuste no formulário */
-            input,
-            textarea,
-            button {
-                width: 100%;
-                /* Garantir que os inputs ocupem toda a largura da tela */
+            table th,
+            table td {
+                font-size: 0.8em;
+                padding: 6px;
+            }
+
+            footer {
+                font-size: 0.8em;
+                padding: 10px 0;
             }
         }
 
-        /* Responsividade para dispositivos com largura até 480px (smartphones em modo retrato) */
-        @media (max-width: 480px) {
+        @media (max-width: 390px) {
+            .membro {
+                width: 100%;
+            }
+
             header h1 {
-                font-size: 1.5em;
-                /* Tamanho menor do título */
+                font-size: 1.1em;
             }
 
-            header p {
-                font-size: 1em;
-                /* Ajuste do tamanho do texto */
+            table th,
+            table td {
+                font-size: 0.75em;
+                padding: 5px;
             }
 
-            .membro img {
-                width: 80px;
-                /* Reduzir o tamanho das imagens dos membros */
-                height: 80px;
+            footer {
+                padding: 8px 0;
             }
+        }
 
-            .module table {
-                font-size: 0.8em;
-                /* Tamanho da fonte das tabelas para telas menores */
-            }
+        .red-text {
+            color: var(--error-color);
+        }
+
+        .green-text {
+            color: var(--highlight-color);
+        }
+
+        .java-text {
+            color: #f89800;
+        }
+
+        .python-text {
+            color: #306998;
+        }
+
+        .mysql-text {
+            color: #00758f;
+        }
+
+        .javascript-text {
+            color: #f7df1e;
+        }
+
+        .portugol-text {
+            color: #3399ff;
+        }
+
+        .html-text {
+            color: #ff6347;
+        }
+
+        .postgresql-text {
+            color: #8a2be2;
+        }
+
+        .excel-text {
+            color: #32cd32;
+        }
+
+        .word-text {
+            color: #ff4500;
+        }
+
+        .sqlserver-text {
+            color: #20b2aa;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 50vh;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
         }
     </style>
+
 </head>
 
 <body>
-    <!-- Cabeçalho da Página -->
+
     <header>
         <h1>Bem-vindo à Prova A3 HTML e CSS</h1>
         <p>Aqui nesta página você encontra o uso de diversos elementos HTML e CSS.</p>
     </header>
 
     <section>
-        <img src="https://pbs.twimg.com/profile_images/1427421297642987520/SNfxI6Qx_400x400.jpg" alt="Logo da ETB">
+        <div class="image-container">
+            <img src="https://pbs.twimg.com/profile_images/1427421297642987520/SNfxI6Qx_400x400.jpg" alt="Logo da ETB">
+        </div>
     </section>
 
     <section>
-        <h2>Um pouco sobre o nosso curso</h2>
         <p style="font-size: 1.2em; color: #333;">
             O <strong>Técnico em Informática</strong> é um profissional de nível técnico qualificado para desempenhar
             funções e atividades da área de <em>suporte</em> bem como <strong>desenvolvimento de programas de
@@ -271,6 +321,7 @@
             de microcomputadores e periféricos bem como utilizar gerenciadores de banco de dados e editores de texto e
             planilhas eletrônicas.
         </p>
+        <br>
         <h3>HABILITAÇÕES</h3>
         <ul>
             <li><strong>Auxiliar técnico em Informática</strong> (1 semestre);</li>
@@ -278,23 +329,27 @@
             <li><strong>Assistente Técnico II em Informática</strong> (3 semestres);</li>
             <li><strong>TÉCNICO EM INFORMÁTICA</strong> (4 semestres + estágio).</li>
         </ul>
+        <br>
         <h3>ÁREA DE ATUAÇÃO</h3>
         <p>
             O mercado de trabalho é bastante amplo, seja no <strong>Comércio</strong>, <strong>Indústria</strong>,
             <strong>Empresas Públicas e Privadas</strong>, Escritórios particulares (<em>Contabilidade</em>,
             <em>Advocacia</em>); etc. Permite atuar como <u>autônomo</u> e empreendedor.
         </p>
+        <br>
         <h3>PRINCIPAIS ATIVIDADES</h3>
         <ul>
             <li><strong>Desenvolvimento e manutenção de programas</strong>;</li>
             <li><strong>Manutenção de equipamentos de informática</strong>;</li>
             <li><strong>Operação de microcomputador</strong>.</li>
         </ul>
+        <br>
         <h3>REQUISITOS PESSOAIS NECESSÁRIOS</h3>
         <p>
             <u>Raciocínio Lógico</u>, capacidade de abstração, criatividade, espontaneidade, organização, capacidade de
             observação, <strong>raciocínio espacial</strong>, ética profissional.
         </p>
+        <br>
         <h3>LOCAIS DE TRABALHO</h3>
         <p>
             <strong>Comércio em Geral</strong> – <strong>Empresa Públicas e Privadas</strong> – Escritórios
@@ -307,7 +362,7 @@
         <h2>Curso: Técnico de Nível Médio de Técnico em Informática</h2>
         <p><strong>Eixo Tecnológico:</strong> Informação e Comunicação</p>
         <p><strong>Modalidade:</strong> Presencial</p>
-
+        <br>
         <div class="module">
             <h3>MÓDULO I</h3>
             <table>
@@ -375,7 +430,7 @@
             </table>
             <p>Certificação de qualificação profissional de Operador de Computador no total de 418 horas</p>
         </div>
-
+        <br>
         <div class="module">
             <h3>MÓDULO II</h3>
             <table>
@@ -444,7 +499,7 @@
             <p>Certificado de qualificação profissional de Montador e Reparador de Computadores no total de 418 horas
             </p>
         </div>
-
+        <br>
         <div class="module">
             <h3>MÓDULO III</h3>
             <table>
@@ -512,7 +567,7 @@
             </table>
             <p>Certificado de qualificação profissional de Programador de Sistemas no total de 418 horas</p>
         </div>
-
+        <br>
         <div class="module">
             <h3>MÓDULO IV</h3>
             <table>
@@ -586,7 +641,7 @@
                 </tfoot>
             </table>
         </div>
-
+        <br>
         <h3>Carga Horária Total</h3>
         <table>
             <tr>
@@ -606,26 +661,26 @@
                 <td><strong>1.792</strong></td>
             </tr>
         </table>
-
-        <div class="observations">
-            <h3>Observações:</h3>
-            <ol>
-                <li>A hora-aula tem duração de 57 minutos</li>
-                <li>A carga horária presencial será de 1520h (um mil, quinhentos e vinte), sendo 20 (vinte) aulas
-                    semanais presenciais, 4 (quatro) aulas por dia presenciais.</li>
-                <li>A carga horária não presencial será de 152h (cento e cinquenta e duas), sendo 2 (duas) aulas
-                    semanais não presenciais.</li>
-                <li>O Estágio Profissional Supervisionado Obrigatório pode ser iniciado após a conclusão do Módulo I.
-                </li>
-                <li>Horário das aulas:
+        <br>
+        <h3 class="teste-obs">Observações:</h3>
+        <ol>
+            <li>A hora-aula tem duração de 57 minutos</li>
+            <li>A carga horária presencial será de 1520h (um mil, quinhentos e vinte), sendo 20 (vinte) aulas
+                semanais presenciais, 4 (quatro) aulas por dia presenciais.</li>
+            <li>A carga horária não presencial será de 152h (cento e cinquenta e duas), sendo 2 (duas) aulas
+                semanais não presenciais.</li>
+            <li>O Estágio Profissional Supervisionado Obrigatório pode ser iniciado após a conclusão do Módulo I.
+            </li>
+            <li>Horário das aulas:
+                <ol>
                     <ul>
                         <li>Matutino: 8h às 12h, com intervalo de 12 minutos</li>
                         <li>Vespertino: 14h às 18h, com intervalo de 12 minutos</li>
                         <li>Noturno: 19h às 23h, com intervalo de 12 minutos</li>
                     </ul>
-                </li>
-            </ol>
-        </div>
+                </ol>
+            </li>
+        </ol>
     </section>
 
     <section>
