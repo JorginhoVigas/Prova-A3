@@ -65,7 +65,7 @@
         /* Estilos para cores de texto e fundo */
         .highlight {
             color: red;
-        
+
         }
 
         /* Seções */
@@ -184,6 +184,7 @@
             color: #20b2aa;
             /* cor verde-azulada */
         }
+
         footer {
             background-color: #333;
             color: white;
@@ -192,6 +193,58 @@
             position: relative;
             bottom: 0;
             width: 100%;
+        }
+
+        /* Responsividade para dispositivos com largura até 768px */
+        @media (max-width: 768px) {
+            .equipe {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .membro {
+                width: 100%;
+                /* Alinha os itens da equipe para ocupar 100% da largura da tela */
+                margin: 10px 0;
+            }
+
+            /* Ajuste de tabela */
+            table {
+                font-size: 0.9em;
+                /* Diminuir o tamanho da fonte para telas pequenas */
+            }
+
+            /* Ajuste no formulário */
+            input,
+            textarea,
+            button {
+                width: 100%;
+                /* Garantir que os inputs ocupem toda a largura da tela */
+            }
+        }
+
+        /* Responsividade para dispositivos com largura até 480px (smartphones em modo retrato) */
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5em;
+                /* Tamanho menor do título */
+            }
+
+            header p {
+                font-size: 1em;
+                /* Ajuste do tamanho do texto */
+            }
+
+            .membro img {
+                width: 80px;
+                /* Reduzir o tamanho das imagens dos membros */
+                height: 80px;
+            }
+
+            .module table {
+                font-size: 0.8em;
+                /* Tamanho da fonte das tabelas para telas menores */
+            }
         }
     </style>
 </head>
@@ -596,13 +649,13 @@
         <form action="#" method="post">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required>
-            
+
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
-            
+
             <label for="mensagem">Mensagem:</label>
             <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-            
+
             <button type="submit">Enviar</button>
         </form>
     </section>
